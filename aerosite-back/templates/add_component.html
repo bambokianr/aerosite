@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <form method="post" action="/post_component">
+        <label>Nome:</label>
+        <input id="name" name="name" type="text" />
+        <label>Quantity:</label>
+        <input id="quant" name="quant" type="text" />
+        <label>Price(unit):</label>
+        <input id="price_unit" name="price_unit" type="text" />
+        <label>Price(total):</label>
+        <input id="total" name="total" type="text" />
+        <input type="submit" />
+    </form>
+
+    {% for component in myComponent%}
+        <li>{{ component.id }}. {{ component.name }} - {{ component.quant }} - {{ component.price_unit }} - {{ component.total }}</li>
+    {% endfor %}
+
+</body>
+</html>
